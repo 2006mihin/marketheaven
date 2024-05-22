@@ -1,6 +1,6 @@
 /* Reset CSS */
 * {
-  margin: 0;
+
   padding: 0;
   box-sizing: border-box;
 }
@@ -416,77 +416,74 @@ body {
     background-color: #ffffff;
     margin: 50px 50px; 
 }
-
-/*  venues where vegetables are provided for the supermarr */
-
-.supliers{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
+/* Suppliers section */
+.supliers {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-.supliers .image{
-    flex: 1 1 41rem;
+.supliers .image {
+  flex: 1 1 41rem;
 }
-.supliers .image img{
-    width: 100%;
-    height: 417px;
-    border-radius: 5%;
+.supliers .image img {
+  width: 100%;
+  height: 417px;
+  border-radius: 5%;
 }
-.supliers .content{
-    flex: 1 1 41rem;
-    padding:1rem;
-    background: #668066de;
-    
+.supliers .content {
+  flex: 1 1 41rem;
+  padding: 1rem;
+  background: #668066de;
 }
-
-.supliers .content h3{
-    font-size: 1.5rem;
-    padding: 1rem 0 ;
-    line-height:2 ;
-    color: rgb(255, 255, 255);
+.supliers .content h3 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 2;
+  color: rgb(255, 255, 255);
 }
 
-.Organic{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
+/* Organic section */
+.Organic {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-.Organic.image{
-    flex: 2 1 41rem;
+.Organic .image {
+  flex: 1 1 41rem;
 }
-.Organic .image img{
-    width: 100%;
-    height: 417px;
-    border-radius: 5%;
+.Organic .image img {
+  width: 100%;
+  height: 417px;
+  border-radius: 5%;
 }
-.Organic .content{
-    flex: 5 5 40rem;
-    padding:1rem;
-    background: #668066de;
-    
+.Organic .content {
+  flex: 1 1 41rem;
+  padding: 1rem;
+  background: #668066de;
 }
-
 .Organic .content h3 {
-    color: white; 
-    font-size: 1.5rem;
-    padding: 1rem 0 ;
-    line-height:2 ;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 2;
 }
 
 /* Media query for mobile view */
 @media only screen and (max-width: 600px) {
-    .venue .image,
-    .venue .content {
-        flex: 1 1 100%;
-    }
+  .supliers .image,
+  .supliers .content,
+  .Organic .image,
+  .Organic .content {
+      flex: 1 1 100%;
+  }
 
-    .venue .image {
-        order: -1;
-    }
+  .supliers .image,
+  .Organic .image {
+      order: -1;
+  }
 }
-
 
 
 
