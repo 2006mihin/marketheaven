@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Haven</title>
+    <link rel="stylesheet" href="sign.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--logo and header banner-->
+    <section class="parallax">
+        <div class="logo">
+            <img src="images/main/Shop Logo.png" alt="Logo">
+        </div>
+        <div class="page-title">Market Heaven</div>
+    </section>
+    <!--navigation bar-->
+    <nav>
+        <section class="menu" id="menu">
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu-ul" id="menu-ul">
+                <a href="home.html" class="a-menu"><li>Home</li></a>
+                <a href="about.html" class="a-menu"><li>About</li></a>
+                <li class="dropdown">
+                    <a href="#" class="a-menu">Products <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="vegetables.html">Vegetables</a>
+                        <a href="dairy.html">Dairy</a>
+                        <a href="cosmetics.html">Cosmetics</a>
+                    </div>
+                </li>
+                <a href="order.html" class="a-menu"><li>Order</li></a>
+                <a href="sign.html" class="a-menu"><li>Loyalty Registration</li></a>
+            </ul>
+        </section>
+    </nav>
+    <script src="main.js"></script>
+
+
+    <!--loyalty registration form-->
+
+    <section class="container">
+      <div class="form-content">
+
+            <form action="loyalty_registration" method="POST">
+                <h1>Loyalty Registration</h1>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+        
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="Password" name="Password" required><br><br>
+        
+                <label for="phone">Phone Number:</label><br>
+                 <input type="tel" id="phone" name="phone" required><br><br>
+
+        
+                <label for="loyalty_scheme">Choose Loyalty Scheme:</label><br>
+                <select id="loyalty_scheme" name="loyalty_scheme" required>
+                    <option value="" disabled selected>Select a loyalty scheme</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Bronze">Bronze</option>
+                </select>
+      
+                <button type="submit">Register</button>
+            </form>
+        </div>
+      </section>
+    <!--loyalty registration benifits section-->
+    <section class="Benefits">
+        <div class="benefits-container">
+            <h2>Loyalty Scheme Benefits:</h2>
+            <p><strong>Gold:</strong> 10% discount on all purchases, exclusive access to special events</p>
+            <p><strong>Silver:</strong> 5% discount on all purchases, birthday discounts, monthly newsletter</p>
+            <p><strong>Bronze:</strong> 2% discount on all purchases, occasional special offers</p>
+            <br><br>
+            <p><i>Each loyalty scheme is designed to incentivize customer loyalty and engagement,
+                 offering progressively better rewards as customers move up tiers. These benefits not only encourage repeat business but also foster
+                  a sense of appreciation and value among loyal customers.</i></p>
+        </div>
+    </section>
+    
+
+
+
+
+<!-------------------footer--------------------->
+
+
+<footer>
+  <section class="footer-container">
+    <!-- Logo and social media icons -->
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/main/Shop Logo.png" alt="Shop Logo">
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <strong>Quick Links</strong>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vegetables.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="sign.html">Loyalty Registration</a></li>
+      </ul>
+    </div>
+    <!-- Categories -->
+    <div class="footer-links">
+      <strong>Categories</strong>
+      <ul>
+        <li><a href="vegetables.html">Vegetables</a></li>
+        <li><a href="dairy.html">Dairy Product</a></li>
+        <li><a href="cosmetics.html">Skin Care</a></li>
+        <li><a href="cosmetics.html">Cosmetics</a></li>
+      </ul>
+    </div>
+    <!-- Contact -->
+    <div class="footer-links">
+      <strong>Contact</strong>
+      <ul>
+        <li><a href="#">Phone : +123456789</a></li>
+        <li><a href="#">Email : marketheaven@gmail.com</a></li>
+      </ul>
+    </section>
+    <!-- Payment Methods -->
+  <section class="footer-payment">
+      <strong>Payment Methods</strong>
+      <div class="payment-icons">
+        <img src="images/main/visa.png" alt="Visa">
+        <img src="images/main/master.png" alt="Mastercard">
+        <img src="images/main/paypal.png" alt="PayPal">
+        
+      </div>
+    </div>
+  </section>
+  <!-- Copyright Section -->
+  <section class="footer-copyright">
+    <p>&copy; 2024 MarketHeaven. All rights reserved.</p>
+  </section>
+</footer>
+
+</body>
+</html>
+
