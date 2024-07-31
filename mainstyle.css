@@ -352,8 +352,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  justify-content: center; /* Aligns the grid to the center */
-  padding: 0 10px; /* Ensures equal padding on left and right */
+  justify-content: center; /* grid to the center */
+  padding: 0 10px; /*  equal padding on left and right */
 }
 
 .product-box img {

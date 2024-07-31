@@ -31,6 +31,9 @@
                         <a href="vegetables.html">Vegetables</a>
                         <a href="dairy.html">Dairy</a>
                         <a href="cosmetics.html">Cosmetics</a>
+                        <a href="./fruits.html">Fruits</a>
+                        <a href="./meat.html">Meat and Seafood</a>
+                        <a href="./baking.html">Baking and Cooking Ingredients</a>
                     </div>
                 </li>
                 <a href="order.html" class="a-menu"><li>Order</li></a>
@@ -40,69 +43,441 @@
     </nav>
     <script src="main.js"></script>
 
-<!--my cart table-->
-<section class="cart">
-  <!--heading-->
-  <div class="heading">
-      <h3 class="heading"><u>My Cart</u></h3>
-  </div>
+    
+    <!--vegetable section -->
 
-  <table>
-      <thead>
-          <tr>
-              <th>Item</th>
-              <th>Image</th>
-              <th>Price per Unit</th>
-              <th>Quantity</th>
-              <th>Total Price</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><b>Anchor Milk Powder</b></td>
-              <td><img src="images/Dairy/anchor.jpg" alt="Anchor Milk Powder"></td>
-              <td>350 LKR</td>
-              <td>1</td>
-              <td>350 LKR</td>
-          </tr>
-          <tr>
-              <td><b>Lime(100g)</b></td>
-              <td><img src="images/vegetables/lime.jpg" alt="Lime"></td>
-              <td>100 LKR</td>
-              <td>500g</td>
-              <td>500 LKR</td>
-          </tr>
-          <tr>
-              <td><B>Baby Cheramy Shampoo</b></td>
-              <td><img src="images/cosmetics/baby.jpg" alt="shampo"></td>
-              <td>280 LKR</td>
-              <td>3</td>
-              <td>840 LKR</td>
-          </tr>
-          <tr>
-              <td><b>Coconut</b></td>
-              <td><img src="images/vegetables/coconut.jpg" alt="coconut"></td>
-              <td>95 LKR</td>
-              <td>2</td>
-              <td>190 LKR</td>
-          </tr>
-          <tr>
-              <td><b>Niviea</B></td>
-              <td><img src="images/cosmetics/nviea.jpeg" alt="Niviea"></td>
-              <td>600 LKR</td>
-              <td>1</td>
-              <td>600 LKR</td>
-          </tr>
-      </tbody>
-      <tfoot>
-          <tr>
-              <td colspan="4"><b>Grand Total</b></td>
-              <td><b>2,480 LKR</b></td>
-          </tr>
-      </tfoot>
-  </table>
-</section>
+    <section id="vegetables">
+        <!--heading----------->
+        <div class="product-heading">
+            <h3 class="product-heading">Vegetables</h3>
+            
+        </div>
+        <div class="product-container">
+            <div class="product-box">
+                <img alt="Bell Pepper" src="./images/vegetables/bell peper.jpg">
+                <strong>Bell Pepper</strong>
+                <span class="quantity">250g</span>
+                <span class="price">700 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('Bell Pepper', 700)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="Potato" src="./images/home/patato.png">
+                <strong>Potato</strong>
+                <span class="quantity">1 KG</span>
+                <span class="price">500 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('Potato', 500)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="Corn" src="./images/vegetables/corn.jpg">
+                <strong>Corn (Bada Iringu)</strong>
+                <span class="quantity">1 Pcs</span>
+                <span class="price">65 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('Corn', 65)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="coconut" src="./images/vegetables/coconut.jpg">
+                <strong>Coconut</strong>
+                <span class="quantity">1</span>
+                <span class="price">80 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('coconut', 80)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="onion" src="./images/home/onion.png">
+                <strong>Oniona</strong>
+                <span class="quantity">1 KG</span>
+                <span class="price">700 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('onion', 700)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="carrot" src="./images/vegetables/carrot.png">
+                <strong>Carrot</strong>
+                <span class="quantity">1KG</span>
+                <span class="price">500 LKR</span>
+                <input type="number" min="-1" value="0" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('carrot', 500)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            
+            
+        </div>
+    </section>
 
+    <!--divider line -->
+    <hr class="divider">
+
+        <!--fruits section -->
+
+    <section id="Fruits">
+            <!--heading----------->
+            <div class="product-heading">
+                <h3 class="product-heading">Fruits</h3>
+                
+            </div>
+            <div class="product-container">
+                <div class="product-box">
+                    <img alt="Apple" src="./images/fruits/apple.jpg">
+                    <strong>Apple</strong>
+                    <span class="quantity">1 pcs</span>
+                    <span class="price">100 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('apple', 100)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-box">
+                    <img alt="mango" src="./images/fruits/mango.jpg">
+                    <strong>Mango</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">60 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('mango', 50)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="grapes" src="./images/fruits/grapes.jpg">
+                    <strong>Grapes</strong>
+                    <span class="quantity">200 G</span>
+                    <span class="price">300 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('grapes', 300)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="orange" src="./images/fruits/orange.jpg">
+                    <strong>Orange</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">80 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('orange', 80)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="woodapple" src="./images/fruits/woodapple.jpg">
+                    <strong>Woodapple</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">40 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('woodapple', 40)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="pineapple" src="./images/fruits/pineapple.jpg">
+                    <strong>Pineapple</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">150 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('pineapple', 150)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                
+                
+            </div>
+     </section>
+    <!--divider line -->
+    <hr class="divider">
+         <!--dairy section -->
+
+    <section id="dairy">
+        <!--heading----------->
+        <div class="product-heading">
+            <h3 class="product-heading">Dairy products</h3>
+            
+        </div>
+        <div class="product-container">
+            <div class="product-box">
+                <img alt="ratthi" src="./images/Dairy/ratthi.jpg">
+                <strong>Ratthi</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">450 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('ratthi', 450)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="milo" src="./images/Dairy/milo.jpg">
+                <strong>Milo</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">1000 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('milo', 1000)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="cheese" src="./images/home/happy-cow.jpg">
+                <strong>Happy Cow Cheese</strong>
+                <span class="quantity">1 Pcs</span>
+                <span class="price">500 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('cheese', 500)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="milk" src="./images/Dairy/fresh milk.jpg">
+                <strong>Ambewela Fresh Milk</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">470 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('milk',470)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="anchor" src="./images/Dairy/anchor.jpg">
+                <strong>Anchor</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">600 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('anchor', 600)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+
+            <div class="product-box">
+                <img alt="Magic Chocolate Tub" src="./images/Dairy/magic.jpg">
+                <strong>Magic Chocolate Tub</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">350 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('ice-cream', 350)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            
+            
+        </div>
+    </section>
+    <!--divider line -->
+    <hr class="divider">    
+        <!--meat section -->
+
+    <section id="meat">
+            <!--heading----------->
+            <div class="product-heading">
+                <h3 class="product-heading">Meat and Seafood </h3>
+                
+            </div>
+        </div>
+            <div class="product-container">
+
+                <div class="product-box">
+                    <img alt="chicken" src="./images/meant and seafood/Cic Whole Chicken With Giblet.jpg">
+                    <strong>Whole Chicken With Giblet</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">1250 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('chicken', 1250)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="pork" src="./images/meant and seafood/pork cubes.jpg">
+                    <strong>Pork Cubes</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">2330 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('pork', 2330)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-box">
+                    <img alt="prawns" src="./images/meant and seafood/prawns.jpg">
+                    <strong>Prawns</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">4360 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('prawns', 4360)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="fish" src="./images/meant and seafood/alagudu.jpg">
+                    <strong>Alagoduwa fish</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">880 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('fish', 880)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="chicken cuts" src="./images/meant and seafood/Pre Cut Whole Chicken.jpg">
+                    <strong>re Cut Whole Chicken</strong>
+                    <span class="quantity">1 Pcs</span>
+                    <span class="price">1440 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('chicken cuts', 500)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                <div class="product-box">
+                    <img alt="tuna" src="./images/meant and seafood/tuna.jpg">
+                    <strong>Tuna Fish</strong>
+                    <span class="quantity">1 KG</span>
+                    <span class="price">2290 LKR</span>
+                    <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                    <!--cart-btn------->
+                    <button class="cart-btn" onclick="addToCart('tuna', 2290)">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+                
+                
+            </div>
+     </section>
+    <!--divider line -->
+    <hr class="divider">
+             <!--baking section -->
+
+    <section id="baking">
+        <!--heading----------->
+        <div class="product-heading">
+            <h3 class="product-heading">Baking and Cooking Ingredients</h3>
+            
+        </div>
+        <div class="product-container">
+            <div class="product-box">
+                <img alt="Chilli" src="./images/baking/chilkli.jpg">
+                <strong>Chilli Powderr</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">200 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('Chilli', 200)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="rice" src="./images/baking/rice.jpg">
+                <strong>White Raw Rice 1Kg (5U)</strong>
+                <span class="quantity">1 pcs</span>
+                <span class="price">210 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('rice', 210)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="sugar" src="./images/baking/sugar.jpg">
+                <strong>White Sugar</strong>
+                <span class="quantity">1 KG</span>
+                <span class="price">260 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('sugar', 260)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="oil" src="./images/baking/oil.jpg">
+                <strong>Coconut Oil</strong>
+                <span class="quantity">1 L</span>
+                <span class="price">700 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('oil', 700)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="flour" src="./images/baking/corn flour.jpg">
+                <strong>Corn Flour</strong>
+                <span class="quantity">1 Pcs</span>
+                <span class="price">310 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('flour', 310)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-box">
+                <img alt="bpowder" src="./images/baking/bkinng pwdr.jpg">
+                <strong>Baking Powder</strong>
+                <span class="quantity">1 Pcs</span>
+                <span class="price">180 LKR</span>
+                <input type="number" min="1" value="1" class="product-quantity" placeholder="Enter quantity">
+                <!--cart-btn------->
+                <button class="cart-btn" onclick="addToCart('bpowder', 180)">
+                    <i class="fas fa-shopping-bag"></i> Add to Cart
+                </button>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!--divider line -->
+    <hr class="divider">
+    
+    <div class="cart">
+        <h2>Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <strong>Total Amount: </strong><span id="total-amount">0 LKR</span>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 <!--divider line -->
 <hr class="divider">
 
@@ -110,7 +485,7 @@
 <section class="orderform">
   <!--heading-->
   <div class="heading2">
-      <h3 class="heading2"><u>Confirm Your Order</u></h3>
+      <h3 class="heading2"><u>Comfirm Your Order</u></h3>
   </div> 
 
   <div class="container">
@@ -215,10 +590,13 @@
     <div class="footer-links">
       <strong>Categories</strong>
       <ul>
-        <li><a href="vegetables.html">Vegetables</a></li>
-        <li><a href="dairy.html">Dairy Product</a></li>
-        <li><a href="cosmetics.html">Skin Care</a></li>
-        <li><a href="cosmetics.html">Cosmetics</a></li>
+        <li><a href="./vegetables.html">Vegetables</a></li>
+        <li><a href="./dairy.html">Dairy Product</a></li>
+        <li><a href="./cosmetics.html">Cosmetics</a></li>
+        <li><a href="./fruits.html">Fruits</a></li>
+        <li><a href="./meat.html">Meat and Seafood</a></li>
+        <li><a href="./baking.html">Baking and Cooking</a></li>
+        
       </ul>
     </div>
     <!-- Contact -->

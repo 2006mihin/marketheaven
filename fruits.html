@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="x-icon" href="images/main/favicon.png" >
     <title>Market Heaven</title>
-    <link rel="stylesheet" href="sign.css" type="text/css">
+    <link rel="stylesheet" href="dairy.css" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!--logo and header banner-->
-    <section class="parallax">
+    <section  class="parallax">
         <div class="logo">
             <img src="images/main/Shop Logo.png" alt="Logo">
         </div>
@@ -18,7 +18,7 @@
     </section>
     <!--navigation bar-->
     <nav>
-        <section class="menu" id="menu">
+        <section  class="menu" id="menu">
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -39,59 +39,82 @@
                 <a href="order.html" class="a-menu"><li>Order</li></a>
                 <a href="sign.html" class="a-menu"><li>Loyalty Registration</li></a>
             </ul>
-        </section>
+        </section >
     </nav>
     <script src="main.js"></script>
 
 
-    <!--loyalty registration form-->
 
-    <section class="container">
-      <div class="form-content">
+    <!--product boxes -->
 
-            <form action="loyalty_registration" method="POST">
-                <h1>Loyalty Registration</h1>
-                <label for="fullname">Full Name:</label><br>
-                <input type="text" id="fullname" name="fullname" required><br><br>
-        
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="password">Password:</label><br>
-                <input type="password" id="Password" name="Password" required><br><br>
-        
-                <label for="phone">Phone Number:</label><br>
-                 <input type="tel" id="phone" name="phone" required><br><br>
-
-        
-                <label for="loyalty_scheme">Choose Loyalty Scheme:</label><br>
-                <select id="loyalty_scheme" name="loyalty_scheme" required>
-                    <option value="" disabled selected>Select a loyalty scheme</option>
-                    <option value="Gold">Gold</option>
-                    <option value="Silver">Silver</option>
-                    <option value="Bronze">Bronze</option>
-                </select>
-      
-                <button type="submit">Register</button>
-            </form>
+    <section id="-product">
+        <!--heading----------->
+        <div class="product-heading">
+            <h3 class="product-heading">Our Fruits</h3>
+            
         </div>
-      </section>
-    <!--loyalty registration benifits section-->
-    <section class="Benefits">
-        <div class="benefits-container">
-            <h2>Loyalty Scheme Benefits:</h2>
-            <p><strong>Gold:</strong> 10% discount on all purchases, exclusive access to special events</p>
-            <p><strong>Silver:</strong> 5% discount on all purchases, birthday discounts, monthly newsletter</p>
-            <p><strong>Bronze:</strong> 2% discount on all purchases, occasional special offers</p>
-            <br><br>
-            <p><i>Each loyalty scheme is designed to incentivize customer loyalty and engagement,
-                 offering progressively better rewards as customers move up tiers. These benefits not only encourage repeat business but also foster
-                  a sense of appreciation and value among loyal customers.</i></p>
-        </div>
+
+        <section id="dairy-products">
+            <div class="product-container">
+                <div class="product-box">
+                    <img alt="Highland Yoghurt" src="images/home/yoghurt.png">
+                    <strong>Highland Yoghurt</strong>
+                    <span class="quantity">1 Pcs</span><br>
+                    <span class="price">40 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Ambewela Fresh Milk" src="images/Dairy/fresh milk.jpg">
+                    <strong>Ambewela Fresh Milk</strong>
+                    <span class="quantity">1 Pcs</span><br>
+                    <span class="price">800 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Happy Cow Cheese" src="images/home/happy-cow.jpg">
+                    <strong>Happy Cow Cheese</strong>
+                    <span class="quantity">1 Pcs</span><br>
+                    <span class="price">490 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="anchor" src="images/Dairy/anchor.jpg">
+                    <strong>Anchor Milk Powder</strong>
+                    <span class="quantity">1 Pcs</span><br>
+                    <span class="price">350 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="rich life" src="images/Dairy/rich life.jpg">
+                    <strong>Richlife Iced Coffee</strong>
+                    <span class="quantity">100ml</span><br>
+                    <span class="price">620 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                <div class="product-box">
+                    <img alt="Milo Packet" src="images/Dairy/milo.jpg">
+                    <strong>Milo Packet</strong>
+                    <span class="quantity">1 Pcs</span><br>
+                    <span class="price">560 LKR</span>
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i> Add Cart
+                    </a>
+                </div>
+                
+            </div>
+         </section>
     </section>
-    
-
-
+        
 
 
 <!-------------------footer--------------------->
@@ -157,8 +180,8 @@
   <!-- Copyright Section -->
   <section class="footer-copyright">
     <p>&copy; 2024 MarketHeaven. All rights reserved.</p>
+  </div>
   </section>
-</footer>
 
 </body>
 </html>
