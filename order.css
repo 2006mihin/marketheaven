@@ -303,7 +303,7 @@
 }
 
 .cart-table th, .cart-table td {
-    border: 1px solid #dddddd;
+    border: 2px solid #dddddd;
     padding: 10px;
     text-align: center;
 }
@@ -313,6 +313,42 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+.favourite-button {
+  margin-top: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.4s;
+  border-radius: 10px;
+}
+
+.favourite-button:hover {
+  background-color: rgb(0, 74, 0);
+}
+
+.proceed-button {
+  display: block;
+  width: 280px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 10px 0;
+  background-color: rgb(190, 12, 12);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.proceed-button:hover {
+  background-color: rgb(0, 199, 0);
+}
+
 /*divider line*/
 .divider {
   border: 0;
@@ -322,128 +358,6 @@
   margin: 50px 50px; 
 }
 
-
-
-/*ORDER FORM------------------*/
-
-.heading2 {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #000000;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-}
-
-.orderform {
-  width: 100%;
-  padding: 20px;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
-  margin-bottom: -40px;
-  
-}
-
-.container {
-  background: linear-gradient(to right, rgb(149, 149, 149), rgb(212, 209, 209));
-  max-width: 800px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0.5rem 1.5rem;
-  align-items: center;
-  border: 3px solid rgb(0, 0, 0);
-}
-
-.left, .right {
-  flex-basis: 50%;
-}
-
-form {
-  padding: 1rem;
-}
-
-h3 {
-  margin-top: 1rem;
-  color: #072905;
-}
-
-form input[type="text"], form input[type="number"] {
-  width: 100%;
-  padding: 0.5rem 0.7rem;
-  margin: 0.5rem 0;
-  outline: none;
-}
-
-#zip {
-  display: flex;
-  margin-top: 0.5rem;
-}
-
-#zip select {
-  padding: 0.5rem 0.7rem;
-}
-
-#zip input[type="number"] {
-  padding: 0.5rem 0.7rem;
-  margin-left: 5px;
-}
-
-input[type="submit"] {
-  width: 100%;
-  padding: 0.7rem 1.5rem;
-  background: #007220;
-  color: white;
-  border: none;
-  outline: none;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background: #045617;
-}
-
-@media only screen and (max-width: 770px) {
-  .container {
-      flex-direction: column;
-  }
-
-  body {
-      overflow-x: hidden;
-  }
-}
-
-/* New styles for screens below 400px */
-@media only screen and (max-width: 400px) {
-  .heading2 {
-      font-size: 1.5rem;
-      margin-top: 20px;
-  }
-
-  .container {
-      padding: 0.5rem;
-  }
-
-  form input[type="text"], form input[type="number"] {
-      padding: 0.3rem 0.5rem;
-      margin: 0.3rem 0;
-  }
-
-  #zip select, #zip input[type="number"] {
-      padding: 0.3rem 0.5rem;
-  }
-
-  input[type="submit"] {
-      padding: 0.5rem 1rem;
-      margin-top: 0.5rem;
-  }
-}
 
 
 /*----------------footer------------*/

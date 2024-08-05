@@ -8,11 +8,9 @@ function addToCart(productName, productPrice) {
     const existingProductIndex = cart.findIndex(item => item.name === productName);
 
     if (existingProductIndex !== -1) {
-        // Update existing product quantity and total
         cart[existingProductIndex].quantity = quantity;
         cart[existingProductIndex].total = productTotal;
     } else {
-        // Add new product to cart
         const cartItem = {
             name: productName,
             quantity: quantity,
@@ -47,4 +45,21 @@ function updateCart() {
     });
 
     document.getElementById('total-amount').innerText = `${totalAmount} LKR`;
+    document.getElementById('proceed-button').href = `payment.html?total=${totalAmount}`;
 }
+
+document.getElementById('add-to-favourites').addEventListener('click', function() {
+    localStorage.setItem('favouriteCart', JSON.stringify(cart));
+    alert('Cart saved as favourite!');
+});
+
+document.getElementById('apply-favourites').addEventListener('click', function() {
+    const favouriteCart = localStorage.getItem('favouriteCart');
+    if (favouriteCart) {
+        cart = JSON.parse(favouriteCart);
+        updateCart();
+        alert('Favourite cart applied!');
+    } else {
+        alert('No favourite cart found!');
+    }
+});

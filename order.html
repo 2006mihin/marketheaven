@@ -458,101 +458,37 @@
     <!--divider line -->
     <hr class="divider">
     
-    <div class="cart">
-        <h2>Cart</h2>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-                <!-- Cart items will be added here dynamically -->
-            </tbody>
-        </table>
-        <div class="cart-total">
-            <strong>Total Amount: </strong><span id="total-amount">0 LKR</span>
+        <div class="cart">
+            <h2>Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <strong>Total Amount: </strong><span id="total-amount">0 LKR</span>
+            </div>
+            <div class="buttons">
+                <button id="add-to-favourites" class="favourite-button">Add to Favourites</button>
+                <button id="apply-favourites" class="favourite-button">Apply Favourites</button>
+            </div>
+            <a href="payment .html" class="proceed-button">Proceed to Pay</a>
         </div>
-    </div>
+    
+    
     <script src="scripts.js"></script>
 <!--divider line -->
 <hr class="divider">
 
-<!--order form-->
-<section class="orderform">
-  <!--heading-->
-  <div class="heading2">
-      <h3 class="heading2"><u>Comfirm Your Order</u></h3>
-  </div> 
 
-  <div class="container">
-      <div class="left">
-          <h3>BILLING ADDRESS</h3>
-          <form>
-              Full name
-              <input type="text" name="" placeholder="Enter name">
-              Email
-              <input type="text" name="" placeholder="Enter email">
-
-              Address
-              <input type="text" name="" placeholder="Enter address">
-              
-              City
-              <input type="text" name="" placeholder="Enter City">
-              <div id="zip">
-                  <label>
-                      Branches
-                      <select>
-                          <option>Choose branch</option>
-                          <option>Kurunegala</option>
-                          <option>Kandy</option>
-                          <option>Colombo</option>
-                      </select>
-                  </label>
-                  <label>
-                      Zip code
-                      <input type="number" name="" placeholder="Zip code">
-                  </label>
-              </div>
-          </form>
-      </div>
-      <div class="right">
-          <h3>PAYMENT</h3>
-          <form>
-              Accepted Card <br>
-              <img src="images/order/card1.png" width="100">
-              <img src="images/order/card2.png" width="50">
-              <br><br>
-
-              Credit card number
-              <input type="text" name="" placeholder="Enter card number">
-              
-              Exp month
-              <input type="text" name="" placeholder="Enter Month">
-              <div id="zip">
-                  <label>
-                      Exp year
-                      <select>
-                          <option>Choose Year..</option>
-                          <option>2022</option>
-                          <option>2023</option>
-                          <option>2024</option>
-                          <option>2025</option>
-                      </select>
-                  </label>
-                  <label>
-                      CVV
-                      <input type="number" name="" placeholder="CVV">
-                  </label>
-              </div>
-          </form>
-          <input type="submit" name="" value="Proceed to Checkout">
-      </div>
-  </div>
-</section>
 
 
 
