@@ -6,9 +6,9 @@
 
 /* Default styles */
 body {
-  background: #393939;
+  background: #2c2c2c; /* Darker background for better contrast */
   font-family: system-ui;
-  color: #ffffff; /* Ensure text is readable */
+  color: #f5f5f5; /* Lighter text color for better contrast */
 }
 
 /* Parallax section */
@@ -24,7 +24,7 @@ body {
 /* Page title */
 .page-title {
   text-align: center;
-  color: #ffffff;
+  color: #f5f5f5; /* High contrast color */
   padding: 50px;
   font-variant: small-caps;
   font-size: 100px;
@@ -50,7 +50,7 @@ body {
 
 /* Navigation menu */
 .menu {
-  background: #d2d2d2a4;
+  background: #3d3d3d; /* Darker background for better contrast */
   text-align: center;
 }
 
@@ -69,13 +69,13 @@ body {
 
 .a-menu {
   text-decoration: none;
-  color: #000000;
+  color: #f5f5f5; /* High contrast color */
   outline: 2px solid transparent; /* Focus outline */
 }
 
 .a-menu:focus, .a-menu:hover {
-  color: #ffffff;
-  background-color: #1cc11a;
+  color: #ffffff; /* Higher contrast for hover/focus */
+  background-color: #1cc11a; /* Ensure high contrast */
   outline: 2px solid #ffffff; /* Enhanced focus style */
 }
 
@@ -88,7 +88,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #929292;
+  background-color: #4a4a4a; /* Darker background for better contrast */
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -96,7 +96,7 @@ body {
 }
 
 .dropdown-content a {
-  color: black;
+  color: #f5f5f5; /* High contrast color */
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -104,8 +104,8 @@ body {
 }
 
 .dropdown-content a:focus, .dropdown-content a:hover {
-  background: #1cc11a;
-  color: white;
+  background: #1cc11a; /* Ensure high contrast */
+  color: #ffffff; /* Higher contrast for hover/focus */
   outline: 2px solid #ffffff; /* Enhanced focus style */
 }
 
@@ -143,11 +143,11 @@ body {
   .menu .a-menu {
     display: block;
     text-decoration: none;
-    color: black;
+    color: #f5f5f5; /* High contrast color */
   }
 
   .menu .a-menu:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Ensure high contrast */
   }
 
   .dropdown-content {
@@ -168,7 +168,7 @@ body {
 
   .menu-ul {
     display: none;
-    background: #d2d2d2d1;
+    background: #3d3d3d; /* Darker background for better contrast */
     position: absolute;
     top: 60px;
     width: 100%;
@@ -203,7 +203,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #ffffff;
+  color: #f5f5f5; /* High contrast color */
   margin-top: 50px;
   margin-bottom: 20px;
 }
@@ -225,7 +225,7 @@ body {
   width: 100%;
   height: 315px;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: #ffffff; /* Ensure contrast with text */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -244,7 +244,7 @@ body {
 
 /* Product Box Text */
 .product-box strong {
-  color: #202020;
+  color: #202020; /* Dark text on light background */
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
@@ -253,7 +253,7 @@ body {
 }
 
 .product-box .quantity {
-  color: #949494;
+  color: #6c6c6c; /* Slightly lighter text for readability */
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -265,7 +265,7 @@ body {
   margin-top: 5px;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #393939;
+  color: #333333; /* Darker color for better contrast */
   display: block;
 }
 
@@ -275,15 +275,15 @@ body {
   margin-top: 5px;
   padding: 3px;
   border-radius: 5px;
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc; /* Slightly darker border for visibility */
 }
 
 /* Cart Button */
 .product-box .cart-btn {
   width: 100%;
   height: 35px;
-  background-color: #ecf7ee;
-  color: #4eb060;
+  background-color: #e1f3e0; /* Lighter background for contrast */
+  color: #4eb060; /* High contrast text color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,7 +296,7 @@ body {
 }
 
 .product-box .cart-btn:focus, .product-box .cart-btn:hover {
-  background-color: #4eb060;
+  background-color: #4eb060; /* High contrast on hover/focus */
   color: #ffffff;
   outline: 2px solid #ffffff; /* Enhanced focus style */
 }
@@ -318,7 +318,7 @@ body {
 }
 
 .cart-table th, .cart-table td {
-  border: 2px solid #dddddd;
+  border: 2px solid #cccccc; /* Slightly darker borders for visibility */
   padding: 10px;
   text-align: center;
 }
@@ -326,40 +326,34 @@ body {
 /* Favourite and Proceed Buttons */
 .favourite-button {
   margin-top: 20px;
-  background-color: green;
+  background-color: #4caf50; /* High contrast color */
   color: white;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   margin-right: 10px;
   transition: background-color 0.4s;
-  border-radius: 10px;
   outline: 2px solid transparent; /* Focus outline */
 }
 
 .favourite-button:focus, .favourite-button:hover {
-  background-color: rgb(0, 74, 0);
+  background-color: #45a049; /* High contrast on hover/focus */
   outline: 2px solid #ffffff; /* Enhanced focus style */
 }
 
 .proceed-button {
-  display: block;
-  width: 280px;
-  margin: 20px auto;
-  border-radius: 5px;
-  padding: 10px 0;
-  background-color: rgb(190, 12, 12);
+  margin-top: 20px;
+  background-color: #008cba; /* High contrast color */
   color: white;
-  text-align: center;
-  text-decoration: none;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
   outline: 2px solid transparent; /* Focus outline */
 }
 
 .proceed-button:focus, .proceed-button:hover {
-  background-color: rgb(0, 199, 0);
+  background-color: #007bb5; /* High contrast on hover/focus */
   outline: 2px solid #ffffff; /* Enhanced focus style */
 }
 
@@ -381,15 +375,15 @@ body {
   border: 0;
   border-radius: 10%;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #f5f5f5; /* High contrast color */
   margin: 50px 50px;
 }
 
 /* Footer Styling */
 footer {
-  background: linear-gradient(to right, #096101,#004309, #004309,#096101);
+  background: linear-gradient(to right, #003300, #004d00, #004d00, #003300); /* Adjusted gradient for better contrast */
   padding: 1.5rem 1.5rem;
-  border-top: 5px solid #4eb060;
+  border-top: 5px solid #66cc66; /* Higher contrast border color */
   color: #ffffff;
   margin-top: 40px;
   width: 100%;
@@ -474,7 +468,7 @@ footer {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  border: 1px solid #b5b2b215;
+  border: 1px solid #ffffff; /* Higher contrast border color */
   font-size: 1.2rem;
   margin: 0 8px;
   transition: all 0.3s ease;
@@ -504,7 +498,7 @@ footer {
 }
 
 .footer-links ul li a {
-  color: #ffffff;
+  color: #f5f5f5; /* High contrast color */
   opacity: 0.8;
   margin: 8px 0;
   font-size: 1rem;
