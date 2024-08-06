@@ -242,7 +242,7 @@
 }
 
 .product-box .quantity {
-  color: #949494;
+  color: #363333;
   font-size: 0.7rem; 
   font-weight: 500;
   letter-spacing: 1px;
@@ -254,7 +254,7 @@
   margin-top: 5px; 
   font-weight: 600;
   font-size: 1.2rem; 
-  color: #393939;
+  color: #000000;
   display: block;
 }
 
@@ -286,7 +286,7 @@
 }
 
 .product-box .cart-btn:hover {
-  background-color: #32a748;
+  background-color: #36a74b;
   color: #ffffff;
   transition: all ease 0.3s;
 }
