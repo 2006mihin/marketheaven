@@ -263,7 +263,7 @@
   margin-top: 5px;
   padding: 3px; 
   border-radius: 5px;
-  border: 1px solid #dddddd;
+  border: 1px solid #454343df;
 }
 
 .product-box .cart-btn {
@@ -286,7 +286,7 @@
 }
 
 .product-box .cart-btn:hover {
-  background-color: #4eb060;
+  background-color: #32a748;
   color: #ffffff;
   transition: all ease 0.3s;
 }
@@ -303,7 +303,7 @@
 }
 
 .cart-table th, .cart-table td {
-    border: 2px solid #dddddd;
+    border: 2px solid #ffffff;
     padding: 10px;
     text-align: center;
 }
