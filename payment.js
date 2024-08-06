@@ -26,9 +26,4 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     }
 });
 
-window.addEventListener('load', function() {
-    // Get total amount from URL parameters and display it
-    const urlParams = new URLSearchParams(window.location.search);
-    const totalAmount = urlParams.get('total');
-    document.getElementById('total-amount').innerText = `${totalAmount} LKR`;
-});
+

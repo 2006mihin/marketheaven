@@ -43,9 +43,6 @@ function updateCart() {
 
         cartItemsContainer.appendChild(cartItemRow);
     });
-
-    document.getElementById('total-amount').innerText = `${totalAmount} LKR`;
-    document.getElementById('proceed-button').href = `payment.html?total=${totalAmount}`;
 }
 
 document.getElementById('add-to-favourites').addEventListener('click', function() {
