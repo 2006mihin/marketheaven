@@ -4,6 +4,7 @@ body {
     color: #333; 
 }
 
+/*order summary table*/
 .order-summary {
     margin: 50px auto;
     width: 80%;
@@ -44,6 +45,7 @@ body {
     background-color: #fff;
 }
 
+/*order form*/
 .heading2 {
     text-align: center;
     font-weight: 700;

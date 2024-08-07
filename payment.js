@@ -1,13 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+        // Get the order summary container element
     const orderSummaryContainer = document.getElementById('order-summary-items');
+    
+    // Retrieve the cart data from localStorage and parse it.
     const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
     let totalAmount = 0;
 
     cartData.forEach(item => {
         totalAmount += item.total;
-
+        
         const orderItemRow = document.createElement('tr');
 
+
+        // Set the inner HTML of the row with the item name and total price
         orderItemRow.innerHTML = `
             <td>${item.name}</td>
             <td>${item.total} LKR</td>
@@ -40,10 +45,10 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     const cvv = form.cvv.value.trim();
 
     if (name && email && address && branch && cardnumber && expmonth && expyear && cvv) {
-        // Display thank you message and delivery date
+        // Display thank you message and delivery date in 7days
         const today = new Date();
         const deliveryDate = new Date(today);
-        deliveryDate.setDate(today.getDate() + 7); // Delivery in 7 days
+        deliveryDate.setDate(today.getDate() + 7);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const formattedDate = deliveryDate.toLocaleDateString(undefined, options);
 
