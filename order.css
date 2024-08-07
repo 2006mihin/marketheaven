@@ -268,8 +268,8 @@
 .product-box .cart-btn {
   width: 100%;
   height: 35px;
-  background-color: #2d6a4f; /* Darker green for better contrast */
-  color: #ffffff; /* White text for high contrast */
+  background-color: #2d6a4f; /* Correct background color */
+  color: #ffffff; /* Correct text color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,9 +280,10 @@
   transition: all ease 0.3s;
 }
 
+
 .product-box .cart-btn:hover {
-  background-color: #1a4d29; /* Even darker green on hover for better visibility */
-  color: #ffffff; /* Keep text white for contrast */
+  background-color: #1a4d29; 
+  color: #ffffff; 
 }
 
 .cart {
@@ -291,11 +292,11 @@
     text-align: center;
 }
 .cart-table th {
-  background-color: #000000; /* A vibrant blue color for headings */
-  color: #ffffff; /* White text color for contrast */
-  font-family: 'Poppins', sans-serif; /* Matching font for consistency */
-  font-weight: 700; /* Bold text for emphasis */
-  font-size: 1.2rem; /* Slightly larger text for better readability */
+  background-color: #000000; 
+  color: #ffffff; 
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700; 
+  font-size: 1.2rem; 
 }
 
 .cart h2{
@@ -314,7 +315,7 @@
 }
 
 .cart-table th, .cart-table td {
-    border: 3px solid #ffdd00;
+    border: 1px solid #ffffff;
     padding: 10px;
     text-align: center;
 }
@@ -367,13 +368,13 @@
 /* Responsive layout */
 @media only screen and (max-width: 768px) {
   .product-container {
-      grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+      grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media only screen and (max-width: 480px) {
   .product-container {
-      grid-template-columns: 1fr; /* One column for mobile screens */
+      grid-template-columns: 1fr; 
   }
 }
 

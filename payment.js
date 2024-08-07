@@ -1,3 +1,30 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const orderSummaryContainer = document.getElementById('order-summary-items');
+    const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+    let totalAmount = 0;
+
+    cartData.forEach(item => {
+        totalAmount += item.total;
+
+        const orderItemRow = document.createElement('tr');
+
+        orderItemRow.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.total} LKR</td>
+        `;
+
+        orderSummaryContainer.appendChild(orderItemRow);
+    });
+
+    // Add a row to display the total amount
+    const totalRow = document.createElement('tr');
+    totalRow.innerHTML = `
+        <td><strong>Total Amount:</strong></td>
+        <td><strong>${totalAmount} LKR</strong></td>
+    `;
+    orderSummaryContainer.appendChild(totalRow);
+});
+
 document.getElementById('payment-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -21,9 +48,10 @@ document.getElementById('payment-form').addEventListener('submit', function(even
         const formattedDate = deliveryDate.toLocaleDateString(undefined, options);
 
         alert(`Thank you for your purchase! Your order will be delivered by ${formattedDate}.`);
+
+        // Clear cart data
+        localStorage.removeItem('cartData');
     } else {
-        alert('Please fill out all fields correctly.');
+        alert('Please fill out all fields.');
     }
 });
-
-

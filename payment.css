@@ -1,52 +1,79 @@
 body {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+    background: hsl(0, 3%, 70%); 
     font-family: 'Poppins', sans-serif;
+    color: #333; 
+}
+
+.order-summary {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+.order-summary h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #007220; 
+}
+.order-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; 
+    
+   
+}
+
+.order-summary-table th {
+    background-color: #007220; 
+    color: #ffffff; 
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.order-summary-table th, .order-summary-table td {
+    border: 1px solid #000000; 
+    padding: 10px;
+    text-align: center;
+}
+
+.order-summary-table tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+.order-summary-table tr:nth-child(odd) {
+    background-color: #fff;
 }
 
 .heading2 {
     text-align: center;
     font-weight: 700;
+    margin-top: -60px;
     font-size: 2rem;
-    color: #000000;
-    margin: 20px 0;
+    color: #007220; 
+    
 }
 
 .orderform {
     width: 100%;
     padding: 20px;
-    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .container {
-    background: linear-gradient(to right, rgb(149, 149, 149), rgb(212, 209, 209));
-    max-width: 1000px;
+    background: #ffffff; 
+    max-width: 800px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border: 3px solid rgb(0, 0, 0);
+    padding: 2rem;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd; 
 }
 
-.order-total {
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: bold;
-    color: #c01313d8;
-}
-
-.payment-details h3 {
-    margin-top: 1rem;
-    text-align: center;
-    color: #072905;
-}
 
 form {
     width: 100%;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,8 +82,8 @@ form {
 .form-row {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 70px; /* Add gap between left and right columns */
+    flex-wrap: wrap;
+    gap: 30px; 
 }
 
 .form-column {
@@ -68,35 +95,39 @@ form {
 form label {
     display: block;
     margin-top: 0.5rem;
+    font-weight: bold; 
 }
 
 form input[type="text"], form input[type="email"], form input[type="number"], form select {
-    width: 100%;
-    padding: 0.5rem;
+    width: 80%;
+    padding: 0.8rem;
     margin-top: 0.5rem;
-    outline: none;
-    box-sizing: border-box; /* Ensure padding does not affect width */
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
 }
 
 .pay-now-button {
     width: 50%;
     padding: 0.7rem;
-    background: #007220;
+    background: #007220; 
     color: white;
     border: none;
-    outline: none;
-    margin-top: 1rem;
+    border-radius: 5px; 
     cursor: pointer;
     text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+
 }
 
 .pay-now-button:hover {
-    background: #045617;
+    background: #005a1e; 
 }
 
 @media only screen and (max-width: 770px) {
     .container {
         flex-direction: column;
+      
     }
 
     .form-row {
@@ -105,7 +136,7 @@ form input[type="text"], form input[type="email"], form input[type="number"], fo
 
     .form-column {
         width: 100%;
-        margin-bottom: 1rem;
+        
     }
 
     .pay-now-button {
@@ -119,10 +150,11 @@ form input[type="text"], form input[type="email"], form input[type="number"], fo
     }
     
     form input, form select {
-        padding: 0.3rem;
+        padding: 0.5rem;
     }
     
     .pay-now-button {
         padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
