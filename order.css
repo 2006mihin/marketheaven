@@ -265,30 +265,24 @@
   border-radius: 5px;
   border: 1px solid #454343df;
 }
-
 .product-box .cart-btn {
   width: 100%;
-  height: 35px; 
-  background-color: #b4b4b4;
-  color: #1a7900;
+  height: 35px;
+  background-color: #2d6a4f; /* Darker green for better contrast */
+  color: #ffffff; /* White text for high contrast */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px; 
+  margin-top: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all ease 0.3s;
 }
 
-.product-box .cart-btn i {
-  margin-right: 8px; 
-}
-
 .product-box .cart-btn:hover {
-  background-color: #36a74b;
-  color: #ffffff;
-  transition: all ease 0.3s;
+  background-color: #1a4d29; /* Even darker green on hover for better visibility */
+  color: #ffffff; /* Keep text white for contrast */
 }
 
 .cart {
@@ -296,23 +290,43 @@
     width: 80%;
     text-align: center;
 }
+.cart-table th {
+  background-color: #000000; /* A vibrant blue color for headings */
+  color: #ffffff; /* White text color for contrast */
+  font-family: 'Poppins', sans-serif; /* Matching font for consistency */
+  font-weight: 700; /* Bold text for emphasis */
+  font-size: 1.2rem; /* Slightly larger text for better readability */
+}
 
+.cart h2{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem; 
+  color: #ffffff;
+  margin-top: 50px; 
+  margin-bottom: 20px;  
+
+}
 .cart-table {
     width: 100%;
     border-collapse: collapse;
 }
 
 .cart-table th, .cart-table td {
-    border: 2px solid #ffffff;
+    border: 3px solid #ffdd00;
     padding: 10px;
     text-align: center;
 }
-
+.cart-table tr,th{
+  color: #ffffff;
+}
 .cart-total {
     margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
 }
+
 
 .favourite-button {
   margin-top: 20px;

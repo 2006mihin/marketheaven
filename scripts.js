@@ -43,6 +43,14 @@ function updateCart() {
 
         cartItemsContainer.appendChild(cartItemRow);
     });
+
+    // Add a row to display the total amount
+    const totalRow = document.createElement('tr');
+    totalRow.innerHTML = `
+        <td colspan="3"><strong>Total Amount:</strong></td>
+        <td><strong>${totalAmount} LKR</strong></td>
+    `;
+    cartItemsContainer.appendChild(totalRow);
 }
 
 document.getElementById('add-to-favourites').addEventListener('click', function() {
