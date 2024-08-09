@@ -52,6 +52,9 @@ function updateCart() {
         <td><strong>${totalAmount} LKR</strong></td>
     `;
     cartItemsContainer.appendChild(totalRow);
+
+    // Save the updated cart in localStorage
+    localStorage.setItem('cartData', JSON.stringify(cart));
 }
 
 // Save the cart as favourites
@@ -80,7 +83,7 @@ document.getElementById('clear-cart').addEventListener('click', function() {
     alert('Cart cleared!');
 });
 
-// Load the cart data when the doc ument is loaded
+// Load the cart data when the document is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const savedCart = localStorage.getItem('cartData');
     if (savedCart) {
