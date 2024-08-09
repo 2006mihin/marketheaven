@@ -1,20 +1,17 @@
 let cart = [];
 
-// add a product to the cart
+// Add a product to the cart
 function addToCart(productName, productPrice) {
-    // Get the quantity input field next to the add button
     const quantityInput = event.target.previousElementSibling;
-    const quantity = parseInt(quantityInput.value); 
-    const productTotal = quantity * productPrice; 
-    // Check if the product already exists in the cart
+    const quantity = parseInt(quantityInput.value);
+    const productTotal = quantity * productPrice;
+
     const existingProductIndex = cart.findIndex(item => item.name === productName);
 
     if (existingProductIndex !== -1) {
-        // If the product exists, update its quantity and total price
         cart[existingProductIndex].quantity = quantity;
         cart[existingProductIndex].total = productTotal;
     } else {
-        // If the product doesn't exist, create a new cart item and add it to the cart
         const cartItem = {
             name: productName,
             quantity: quantity,
@@ -24,20 +21,18 @@ function addToCart(productName, productPrice) {
         cart.push(cartItem);
     }
 
-    // Update the cart display
     updateCart();
 }
 
 // Function to update the cart display
 function updateCart() {
     const cartItemsContainer = document.getElementById('cart-items');
-    cartItemsContainer.innerHTML = ''; 
+    cartItemsContainer.innerHTML = '';
 
     let totalAmount = 0;
 
-    // repeat the cart and add each item to the display
     cart.forEach(item => {
-        totalAmount += item.total; 
+        totalAmount += item.total;
 
         const cartItemRow = document.createElement('tr');
 
@@ -51,37 +46,54 @@ function updateCart() {
         cartItemsContainer.appendChild(cartItemRow);
     });
 
-    // Add a row to display the total amount
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `
         <td colspan="3"><strong>Total Amount:</strong></td>
         <td><strong>${totalAmount} LKR</strong></td>
     `;
-    cartItemsContainer.appendChild(totalRow); 
+    cartItemsContainer.appendChild(totalRow);
 }
 
-//  save the cart as favourites
+// Save the cart as favourites
 document.getElementById('add-to-favourites').addEventListener('click', function() {
-    localStorage.setItem('favouriteCart', JSON.stringify(cart)); 
+    localStorage.setItem('favouriteCart', JSON.stringify(cart));
     alert('Cart saved as favourite!');
 });
 
-// apply the favourite cart
+// Apply the favourite cart
 document.getElementById('apply-favourites').addEventListener('click', function() {
-    const favouriteCart = localStorage.getItem('favouriteCart'); 
+    const favouriteCart = localStorage.getItem('favouriteCart');
     if (favouriteCart) {
-        cart = JSON.parse(favouriteCart); 
-        updateCart(); 
+        cart = JSON.parse(favouriteCart);
+        updateCart();
         alert('Favourite cart applied!');
     } else {
-        alert('No favourite cart found!'); 
+        alert('No favourite cart found!');
     }
 });
 
-// save the cart data when the document is loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Clear the cart
+document.getElementById('clear-cart').addEventListener('click', function() {
+    cart = [];
+    localStorage.removeItem('cartData');
+    updateCart();
+    alert('Cart cleared!');
+});
 
-    document.querySelector('.proceed-button').addEventListener('click', function() {
-        localStorage.setItem('cartData', JSON.stringify(cart)); 
+// Load the cart data when the doc ument is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const savedCart = localStorage.getItem('cartData');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCart();
+    }
+
+    document.querySelector('.proceed-button').addEventListener('click', function(event) {
+        if (cart.length === 0) {
+            event.preventDefault();
+            alert('Your cart is empty!');
+        } else {
+            localStorage.setItem('cartData', JSON.stringify(cart));
+        }
     });
 });
