@@ -8,10 +8,12 @@ function addToCart(productName, productPrice) {
 
     const existingProductIndex = cart.findIndex(item => item.name === productName);
 
+     // If the product exists, update its quantity and total price
     if (existingProductIndex !== -1) {
         cart[existingProductIndex].quantity = quantity;
         cart[existingProductIndex].total = productTotal;
     } else {
+        // If the product doesn't exist, create a new cart item 
         const cartItem = {
             name: productName,
             quantity: quantity,
@@ -31,11 +33,13 @@ function updateCart() {
 
     let totalAmount = 0;
 
+
     cart.forEach(item => {
+        // Add the total of the current item to the overall total amount
         totalAmount += item.total;
 
+        //create table row to current items with product details
         const cartItemRow = document.createElement('tr');
-
         cartItemRow.innerHTML = `
             <td>${item.name}</td>
             <td>${item.quantity}</td>
@@ -46,6 +50,7 @@ function updateCart() {
         cartItemsContainer.appendChild(cartItemRow);
     });
 
+    // Create a row to display the total amount
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `
         <td colspan="3"><strong>Total Amount:</strong></td>
@@ -85,12 +90,15 @@ document.getElementById('clear-cart').addEventListener('click', function() {
 
 // Load the cart data when the document is loaded
 document.addEventListener('DOMContentLoaded', function() {
+     // Retrieve saved cart data from localStorage
     const savedCart = localStorage.getItem('cartData');
     if (savedCart) {
         cart = JSON.parse(savedCart);
         updateCart();
     }
 
+
+    //  "Proceed to Pay" button
     document.querySelector('.proceed-button').addEventListener('click', function(event) {
         if (cart.length === 0) {
             event.preventDefault();
